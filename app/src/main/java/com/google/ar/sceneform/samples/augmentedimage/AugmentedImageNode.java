@@ -51,19 +51,19 @@ public class AugmentedImageNode extends AnchorNode {
     if (ulCorner == null) {
       ulCorner =
           ModelRenderable.builder()
-              .setSource(context, Uri.parse("models/frame_upper_left.sfb"))
+              .setSource(context, Uri.parse("models/frame_lower_left.sfb"))
               .build();
       urCorner =
           ModelRenderable.builder()
-              .setSource(context, Uri.parse("models/frame_upper_right.sfb"))
+              .setSource(context, Uri.parse("models/Car.sfb"))
               .build();
       llCorner =
           ModelRenderable.builder()
-              .setSource(context, Uri.parse("models/frame_lower_left.sfb"))
+              .setSource(context, Uri.parse("models/frame_upper_left.sfb"))
               .build();
       lrCorner =
           ModelRenderable.builder()
-              .setSource(context, Uri.parse("models/frame_lower_right.sfb"))
+              .setSource(context, Uri.parse("models/frame_upper_right.sfb"))
               .build();
     }
   }
@@ -98,17 +98,24 @@ public class AugmentedImageNode extends AnchorNode {
 
     // Upper left corner.
     localPosition.set(-0.5f * image.getExtentX(), 0.0f, -0.5f * image.getExtentZ());
+    //localPosition.set(0.0f, 0.0f, 0.0f);
     cornerNode = new Node();
     cornerNode.setParent(this);
     cornerNode.setLocalPosition(localPosition);
     cornerNode.setRenderable(ulCorner.getNow(null));
 
     // Upper right corner.
-    localPosition.set(0.5f * image.getExtentX(), 0.0f, -0.5f * image.getExtentZ());
+    //localPosition.set(0.5f * image.getExtentX(), 0.0f, -0.5f * image.getExtentZ());
+    localPosition.set(0.0f, 0.0f, 0.0f);
     cornerNode = new Node();
     cornerNode.setParent(this);
     cornerNode.setLocalPosition(localPosition);
     cornerNode.setRenderable(urCorner.getNow(null));
+    //cornerNode.setWorldScale(new Vector3(0, 0,0 ));
+    /*currently working to scale down object to size of image. Rob suggested using
+    setworldscale, but not sure how to set it, will test what these and othre values return
+    then focus on changing the jpeg
+     */
 
     // Lower right corner.
     localPosition.set(0.5f * image.getExtentX(), 0.0f, 0.5f * image.getExtentZ());

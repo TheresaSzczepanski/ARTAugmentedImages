@@ -124,6 +124,7 @@ public class AugmentedImageFragment extends ArFragment {
         return false;
       }
 
+
       augmentedImageDatabase = new AugmentedImageDatabase(session);
       augmentedImageDatabase.addImage(DEFAULT_IMAGE_NAME, augmentedImageBitmap);
       // If the physical size of the image is known, you can instead use:

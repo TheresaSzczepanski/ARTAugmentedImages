@@ -131,6 +131,10 @@ public class AugmentedImageActivity extends AppCompatActivity {
 
           break;
 
+        default:
+
+          hasPlayed = false;
+
       }
     }
   }
