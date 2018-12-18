@@ -29,12 +29,15 @@ import com.google.ar.sceneform.ux.ArFragment;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import android.media.MediaPlayer;
 
 /**
  * This application demonstrates using augmented images to place anchor nodes. app to include image
  * tracking functionality.
  */
 public class AugmentedImageActivity extends AppCompatActivity {
+
+  public boolean hasPlayed = false;
 
   private ArFragment arFragment;
   private ImageView fitToScanView;
@@ -78,17 +81,38 @@ public class AugmentedImageActivity extends AppCompatActivity {
     Collection<AugmentedImage> updatedAugmentedImages =
         frame.getUpdatedTrackables(AugmentedImage.class);
     for (AugmentedImage augmentedImage : updatedAugmentedImages) {
+
+      //create a new mediaplayer object that loads the raw mp3 file
+      //R.raw.filename to use a specific audio file
+      //open the raw folder in finder and add an mp3 file in order to add the audio file to the project
+
+      MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.villager);
+
       switch (augmentedImage.getTrackingState()) {
         case PAUSED:
           // When an image is in PAUSED state, but the camera is not PAUSED, it has been detected,
           // but not yet tracked.
           String text = "Detected Image " + augmentedImage.getIndex();
           SnackbarHelper.getInstance().showMessage(this, text);
+
           break;
 
         case TRACKING:
           // Have to switch to UI Thread to update View.
           fitToScanView.setVisibility(View.GONE);
+
+          if (!hasPlayed) {
+
+            //if the sound has not been played yet, and the image is being tracked, start the audio file
+
+            mediaPlayer.start();
+
+            //after the sound plays one time, set the hasPlayed boolean to false, so that it does not play again while the image
+            //is on the screen
+
+            hasPlayed = true;
+
+          }
 
           // Create a new anchor for newly found images.
           if (!augmentedImageMap.containsKey(augmentedImage)) {
@@ -100,8 +124,13 @@ public class AugmentedImageActivity extends AppCompatActivity {
           break;
 
         case STOPPED:
+
+          hasPlayed = false;
+
           augmentedImageMap.remove(augmentedImage);
+
           break;
+
       }
     }
   }
