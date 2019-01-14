@@ -1,0 +1,187 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+MERGED from [com.android.support:design:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.5.1.aar/3d78291784072f17c478c6723de933d3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/a0f82db7b00f3405467be9d32b12317f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c38cdfe28579e06f7979b2f368e0f0ab/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/94cb8ed7fd4a0a0ad62873ef6226bfb8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/249fb22b7c9fc3016b066f384f929a55/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3581e3d4e7e5f8713ce6d57297fdc10d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/3afaceedbdc3f600429717d64f9c8e4c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/06712bd42f1a62ade188a39f2607192a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/fced1da74fd3d79f3c065c760a8c912a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/c7906be5c59e4f2c31cc7f29943ac6ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/146a7c97e48e4b80acaadda52fd9e32b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform:core:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.1.aar/cac5f5e9d623cbc96516699e933699d7/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:rendering:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/rendering-1.5.1.aar/67d1c5e4feecf2c942f29c88183d1ecd/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:sceneform-base:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/sceneform-base-1.5.1.aar/a6a9bf286fd3c54c5cc0b3f738f28d2c/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.ar.sceneform:filament-android:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/filament-android-1.5.1.aar/53c59d5cd1ad24c394585905cb69bd01/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b2268b1cfeaabaec9f31d58721f7e4db/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:17:1-46:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/b4627ee729cbda6dde7ac996f022af39/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/56bb148a74885823d270f5eab8466c66/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/20ecc63be52a3ca2bd7ac45388b31869/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+	package
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:19:5-61
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:18:5-51
+	android:versionCode
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:21:3-62
+	android:name
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:21:20-60
+uses-feature#android.hardware.camera.ar
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:24:3-84
+	android:required
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:24:59-82
+	android:name
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:24:17-58
+application
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:26:3-49:17
+MERGED from [com.google.ar.sceneform:sceneform-base:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/sceneform-base-1.5.1.aar/a6a9bf286fd3c54c5cc0b3f738f28d2c/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.ar.sceneform:sceneform-base:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/sceneform-base-1.5.1.aar/a6a9bf286fd3c54c5cc0b3f738f28d2c/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:30:5-44:19
+MERGED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:30:5-44:19
+	android:label
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:29:7-39
+	tools:ignore
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:33:7-46
+	android:icon
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:28:7-43
+	android:allowBackup
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:27:7-34
+	android:layout_gravity
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:32:7-38
+	android:theme
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:30:7-38
+	android:usesCleartextTraffic
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:31:7-43
+activity#com.google.ar.sceneform.samples.augmentedimage.AugmentedImageActivity
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:35:5-45:16
+	android:screenOrientation
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:40:9-43
+	android:exported
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:38:9-32
+	android:configChanges
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:37:9-55
+	android:theme
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:39:9-59
+	android:name
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:36:9-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:41:7-44:23
+action#android.intent.action.MAIN
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:42:9-60
+	android:name
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:42:17-58
+category#android.intent.category.LAUNCHER
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:43:9-68
+	android:name
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:43:19-66
+meta-data#com.google.ar.core
+ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:48:5-77
+	android:value
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:48:50-74
+	android:name
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:48:16-49
+uses-sdk
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.5.1.aar/3d78291784072f17c478c6723de933d3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/sceneform-ux-1.5.1.aar/3d78291784072f17c478c6723de933d3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/a0f82db7b00f3405467be9d32b12317f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/a0f82db7b00f3405467be9d32b12317f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c38cdfe28579e06f7979b2f368e0f0ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c38cdfe28579e06f7979b2f368e0f0ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/94cb8ed7fd4a0a0ad62873ef6226bfb8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/94cb8ed7fd4a0a0ad62873ef6226bfb8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/249fb22b7c9fc3016b066f384f929a55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/249fb22b7c9fc3016b066f384f929a55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3581e3d4e7e5f8713ce6d57297fdc10d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3581e3d4e7e5f8713ce6d57297fdc10d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/3afaceedbdc3f600429717d64f9c8e4c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/3afaceedbdc3f600429717d64f9c8e4c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/06712bd42f1a62ade188a39f2607192a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/06712bd42f1a62ade188a39f2607192a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/fced1da74fd3d79f3c065c760a8c912a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/fced1da74fd3d79f3c065c760a8c912a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/c7906be5c59e4f2c31cc7f29943ac6ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/c7906be5c59e4f2c31cc7f29943ac6ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/146a7c97e48e4b80acaadda52fd9e32b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/146a7c97e48e4b80acaadda52fd9e32b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform:core:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.1.aar/cac5f5e9d623cbc96516699e933699d7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:core:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.1.aar/cac5f5e9d623cbc96516699e933699d7/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/rendering-1.5.1.aar/67d1c5e4feecf2c942f29c88183d1ecd/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/rendering-1.5.1.aar/67d1c5e4feecf2c942f29c88183d1ecd/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:filament-android:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/filament-android-1.5.1.aar/53c59d5cd1ad24c394585905cb69bd01/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar.sceneform:filament-android:1.5.1] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/filament-android-1.5.1.aar/53c59d5cd1ad24c394585905cb69bd01/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b2268b1cfeaabaec9f31d58721f7e4db/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/b2268b1cfeaabaec9f31d58721f7e4db/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:26:5-28:41
+MERGED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:26:5-28:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/b4627ee729cbda6dde7ac996f022af39/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/b4627ee729cbda6dde7ac996f022af39/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/56bb148a74885823d270f5eab8466c66/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/56bb148a74885823d270f5eab8466c66/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/20ecc63be52a3ca2bd7ac45388b31869/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/20ecc63be52a3ca2bd7ac45388b31869/AndroidManifest.xml:20:5-44
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		ADDED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12 reason: com.google.ar.sceneform has a targetSdkVersion < 4
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12 reason: com.google.ar.sceneform has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/AndroidManifest.xml:17:1-50:12 reason: com.google.ar.sceneform requested WRITE_EXTERNAL_STORAGE
+activity#com.google.ar.core.InstallActivity
+ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:33:9-39:80
+	android:excludeFromRecents
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:36:13-46
+	android:launchMode
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:38:13-43
+	android:exported
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:37:13-37
+	android:configChanges
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:35:13-74
+	android:theme
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:39:13-77
+	android:name
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:34:13-62
+meta-data#com.google.ar.core.min_apk_version
+ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:41:9-43:41
+	android:value
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:43:13-38
+	android:name
+		ADDED from [com.google.ar:core:1.5.0] /Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/core-1.5.0.aar/656f3551f54a5d243373544160c0b69a/AndroidManifest.xml:42:13-62
