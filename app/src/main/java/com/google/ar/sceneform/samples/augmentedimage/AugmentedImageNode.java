@@ -87,7 +87,11 @@ public class AugmentedImageNode extends AnchorNode {
   private CompletableFuture<ModelRenderable> videoRenderable;
   @Nullable private ModelRenderable videoPlacedRenderable;
 
-  private MediaPlayer mediaPlayer;
+  public MediaPlayer nodeMediaPlayer;
+  public Node videoNode;
+  private String videoString = "";
+  // Todo: Will probably not need to define the scope up here but rather in the getImages method. Used to try and get the video stopping.
+  public ExternalTexture texture;
 
   public AugmentedImageNode(Context context) {
     // Upon construction, start loading the models for the corners of the frame.
@@ -127,15 +131,16 @@ public class AugmentedImageNode extends AnchorNode {
 
   // TODO: Adding video to image. Working on it right now.
   // TODO: Changing context.
-  public void setImage(AugmentedImage image, Context context) {
+  public void setImage(AugmentedImage image, int augmentedImageIndex, Context context) {
     this.image = image;
-    ExternalTexture texture = new ExternalTexture();
+    texture = new ExternalTexture();
 
 
     // If any of the models are not loaded, then recurse when all are loaded.
     if (!ulCorner.isDone() || !urCorner.isDone() || !llCorner.isDone() || !lrCorner.isDone()) {
       CompletableFuture.allOf(ulCorner, urCorner, llCorner, lrCorner)
-          .thenAccept((Void aVoid) -> setImage(image, context))
+              // Could have errors with passing augmentedImageInt here.
+          .thenAccept((Void aVoid) -> setImage(image, augmentedImageIndex,  context))
           .exceptionally(
               throwable -> {
                 Log.e(TAG, "Exception loading", throwable);
@@ -168,31 +173,49 @@ public class AugmentedImageNode extends AnchorNode {
 
   // TODO: MEDIAPLAYER NOT WORKING. In the process of switching code over.
 
-    mediaPlayer = MediaPlayer.create(context, R.raw.shaq);
-    mediaPlayer.setSurface(texture.getSurface());
-    mediaPlayer.setLooping(true);
 
+    //nodeMediaPlayer = MediaPlayer.create(context, AugmentedImageFragment.Video_list[augmentedImageIndex]);
+    //nodeMediaPlayer.setSurface(texture.getSurface());
+    //nodeMediaPlayer.setLooping(false);
+    AugmentedImageMediaPlayer.createVideo(context, augmentedImageIndex);
+    AugmentedImageMediaPlayer.editVideoSettings(texture.getSurface(), false);
+
+    if(AugmentedImageFragment.Video_list[augmentedImageIndex] == 0){
+      videoString = "shaq";
+    }
+    else{
+      videoString = "skater";
+    }
+
+
+
+
+    // TODO: Setting this equal to the mediaplayer breaks it.
+    //AugmentedImageActivity.augmentedImageVideoPlayer = mediaPlayer;
+
+    // augmentedImageIndex is taken from the arguments of this method - (setImage)
+    AugmentedImageActivity.augmentedImageVideoPlayerIndex = augmentedImageIndex;
     // Set the anchor based on the center of the image.
     setAnchor(image.createAnchor(image.getCenterPose()));
 
 
     //TODO: Video nodes here.
-    Node videoNode = new Node();
+    videoNode = new Node();
     videoNode.setParent(this);
 
 
-    float videoWidth = mediaPlayer.getVideoWidth();
-    float videoHeight = mediaPlayer.getVideoHeight();
+    float videoWidth = AugmentedImageMediaPlayer.mediaPlayerInstance.getVideoWidth();
+    float videoHeight = AugmentedImageMediaPlayer.mediaPlayerInstance.getVideoHeight();
     videoNode.setLocalScale(
             new Vector3(
                     VIDEO_HEIGHT_METERS * (videoWidth / videoHeight), VIDEO_HEIGHT_METERS, 1.0f));
 
     Quaternion q1 = videoNode.getLocalRotation();
-    Quaternion q2 = Quaternion.axisAngle(new Vector3(1.0f, 0f, 0f), 90f);
+    Quaternion q2 = Quaternion.axisAngle(new Vector3(1.0f, 0f, 0f), -90f);
     videoNode.setLocalRotation(Quaternion.multiply(q1, q2));
 
-    if (!mediaPlayer.isPlaying()) {
-      mediaPlayer.start();
+    if (!AugmentedImageMediaPlayer.mediaPlayerInstance.isPlaying()) {
+      AugmentedImageMediaPlayer.mediaPlayerInstance.start();
 
       // Wait to set the renderable until the first frame of the  video becomes available.
       // This prevents the renderable from briefly appearing as a black quad before the video
@@ -203,7 +226,10 @@ public class AugmentedImageNode extends AnchorNode {
                       (SurfaceTexture surfaceTexture) -> {
                         videoNode.setRenderable(videoPlacedRenderable);
                         texture.getSurfaceTexture().setOnFrameAvailableListener(null);
+
                       });
+      //AugmentedImageMediaPlayer.mediaPlayerInstance.stop();
+      // this stops. I AM SO CONFUSED
     } else {
       videoNode.setRenderable(videoPlacedRenderable);
     }
@@ -251,9 +277,23 @@ public class AugmentedImageNode extends AnchorNode {
     cornerNode.setLocalPosition(localPosition);
     cornerNode.setRenderable(llCorner.getNow(null));
     */
+
+    //AugmentedImageMediaPlayer.resetVideo(); -> this correctly stops the video
   }
 
   public AugmentedImage getImage() {
     return image;
+  }
+
+  public void stopVideo(){
+    // If the video is playing.
+    AugmentedImageMediaPlayer.resetVideo();
+    //mediaPlayer.release();
+  }
+
+  // If the mediaPlayer is null the method returns true. Otherwise, it returns false.
+
+  public String getVideoTitle(){
+    return videoString;
   }
 }
