@@ -20,12 +20,14 @@ import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import com.google.ar.core.AugmentedImage;
 import com.google.ar.core.Frame;
 import com.google.ar.core.TrackingState;
 import com.google.ar.sceneform.FrameTime;
+import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.samples.common.helpers.SnackbarHelper;
 import com.google.ar.sceneform.ux.ArFragment;
 
@@ -42,10 +44,14 @@ import android.media.MediaPlayer;
 public class AugmentedImageActivity extends AppCompatActivity {
 
   private MediaPlayer mediaPlayer;
+  public static MediaPlayer augmentedImageVideoPlayer = null;
+  public static Integer augmentedImageVideoPlayerIndex = null;
   private Integer currentSongIndex = null;
 
   private ArFragment arFragment;
   private ImageView fitToScanView;
+
+  private AugmentedImageNode node;
 
   // Augmented image and its associated center pose anchor, keyed by the augmented image in
   // the database.
@@ -102,6 +108,61 @@ public class AugmentedImageActivity extends AppCompatActivity {
           // Have to switch to UI Thread to update View.
           fitToScanView.setVisibility(View.GONE);
 
+          //Need to check if currentNode is null or not
+
+          // TODO: Issue is with I think how the node is defined and the variable is set equal to it, but it is not actually changing it.
+          if((node != null) &&(!(AugmentedImageMediaPlayer.mediaPlayerInstance == null)) && augmentedImage.getIndex() != augmentedImageVideoPlayerIndex){
+
+            // TODO: breaks here, augmentedImageVideoPlayer is not working correctly.
+
+            // TODO: Actually, the solution here might be to send a signal to augmentedImageNode to stop the video.
+            // TODO: using static methods is likely not a viable solution.
+
+            // Stops the currentVideo from playing if a new image is detected and the node's video player is null.
+            Log.d("if", "statement works!");
+            Log.d("videoname", node.getVideoTitle());
+
+            // It does make shaq bigger when a new image is detected!
+
+            //TODO: ISSUE HERE!!!! - 071219
+
+            node.videoNode.setWorldScale(new Vector3(10.0f, 10.0f, 10.0f));
+            // This works!
+
+            if(AugmentedImageMediaPlayer.mediaPlayerInstance.isPlaying()) {
+              // this is running....
+              //AugmentedImageMediaPlayer.mediaPlayerInstance.stop();
+              Log.d("image", "stopping!!!");
+              node.videoNode.setParent(null);
+              node.videoNode.setRenderable(null);
+              node.stopVideo();
+
+            }
+            // What if a mediaplayer is created in AugmentedImageActivity and set in node.
+            //node.removeChild(node.videoNode);
+            //node = null;
+
+            //node.getScene().onRemoveChild(node.getParent());
+            //node.setRenderable(null);
+
+
+
+            //node.nodeMediaPlayer.stop();
+            //node.nodeMediaPlayer.release();
+            //node.nodeMediaPlayer = null;
+
+            //node.getScene().onRemoveChild(node.getParent());
+            //node.setRenderable(null);
+
+
+            // Removed the node but still playing song.
+            //node.removeChild(node.videoNode);
+            //node = null;
+            //augmentedImageVideoPlayer.stop();
+            //augmentedImageVideoPlayer.release();
+          }
+
+
           if (currentSongIndex == null) {
             // If there is no song playing, set currentSongIndex to the song that aligns with
             // the detected image
@@ -112,7 +173,8 @@ public class AugmentedImageActivity extends AppCompatActivity {
             // Create a new mediaPlayer object with the correct song
             // Start the song
           }
-
+          // Stopping the video player if another new image is detected.
+          // Checks if the videoplayer is not null and if the currentImage index is equal to the same index as augmentedImageVideoPlayerIndex (
           else if((currentSongIndex != augmentedImage.getIndex())){
 
             // If the song that is playing does not match up with the song the image it detects
@@ -132,10 +194,12 @@ public class AugmentedImageActivity extends AppCompatActivity {
 
           // Create a new anchor for newly found images.
           if (!augmentedImageMap.containsKey(augmentedImage)) {
-            AugmentedImageNode node = new AugmentedImageNode(this);
-            node.setImage(augmentedImage);
+            //augmentedImageVideoPlayer = MediaPlayer.create(context, AugmentedImageFragment.Video_list[augmentedImageIndex]);
+            node = new AugmentedImageNode(this);
+            node.setImage(augmentedImage, augmentedImage.getIndex(),this);
             augmentedImageMap.put(augmentedImage, node);
             arFragment.getArSceneView().getScene().addChild(node);
+
           }
           break;
 
