@@ -56,12 +56,15 @@ public class AugmentedImageFragment extends ArFragment {
   private static final String[] Image_list = {
           "earth.jpg",
           "elephant.jpg",
-          "sushi.jpg"
+          "sushi.jpg",
+          "skatergirl.JPG"
   };
 
   // Create a list of the song file paths to be used (the order must match the order of Image_list)
-  public static final int[] Music_list = {R.raw.earth, R.raw.kahoot, R.raw.sushi};
+  public static final int[] Music_list = {R.raw.earth, R.raw.kahoot, R.raw.sushi, R.raw.sushi};
 
+  // Creates a list of video files to link with image index
+  public static final int[] Video_list = {R.raw.shaq, R.raw.skater, R.raw.skater, R.raw.skater};
 
   // Do a runtime check for the OpenGL level available at runtime to avoid Sceneform crashing the
   // application.
