@@ -51,7 +51,7 @@ public class AugmentedImageActivity extends AppCompatActivity {
   private ArFragment arFragment;
   private ImageView fitToScanView;
 
-  private AugmentedImageNode node;
+  //private AugmentedImageNode node;
 
   // Augmented image and its associated center pose anchor, keyed by the augmented image in
   // the database.
@@ -111,7 +111,7 @@ public class AugmentedImageActivity extends AppCompatActivity {
           //Need to check if currentNode is null or not
 
           // TODO: Issue is with I think how the node is defined and the variable is set equal to it, but it is not actually changing it.
-          if((node != null) &&(!(AugmentedImageMediaPlayer.mediaPlayerInstance == null)) && augmentedImage.getIndex() != augmentedImageVideoPlayerIndex){
+          if((AugmentedImageMediaPlayer.augmentedImageNode != null) &&(!(AugmentedImageMediaPlayer.mediaPlayerInstance == null)) && augmentedImage.getIndex() != augmentedImageVideoPlayerIndex){
 
             // TODO: breaks here, augmentedImageVideoPlayer is not working correctly.
 
@@ -120,22 +120,26 @@ public class AugmentedImageActivity extends AppCompatActivity {
 
             // Stops the currentVideo from playing if a new image is detected and the node's video player is null.
             Log.d("if", "statement works!");
-            Log.d("videoname", node.getVideoTitle());
+            Log.d("videoname", AugmentedImageMediaPlayer.augmentedImageNode.getVideoTitle());
 
             // It does make shaq bigger when a new image is detected!
 
             //TODO: ISSUE HERE!!!! - 071219
 
-            node.videoNode.setWorldScale(new Vector3(10.0f, 10.0f, 10.0f));
+            AugmentedImageMediaPlayer.augmentedImageNode.videoNode.setWorldScale(new Vector3(10.0f, 10.0f, 10.0f));
             // This works!
 
             if(AugmentedImageMediaPlayer.mediaPlayerInstance.isPlaying()) {
               // this is running....
               //AugmentedImageMediaPlayer.mediaPlayerInstance.stop();
               Log.d("image", "stopping!!!");
-              node.videoNode.setParent(null);
-              node.videoNode.setRenderable(null);
-              node.stopVideo();
+              //node.videoNode.setParent(null);
+              //node.videoNode.setRenderable(null);
+              AugmentedImageMediaPlayer.augmentedImageNode.stopVideo();
+              AugmentedImageMediaPlayer.resetVideo();
+              AugmentedImageMediaPlayer.augmentedImageNode = null;
+
+              //AugmentedImageMediaPlayer.augmentedImageNode.stopVideo();
 
             }
             // What if a mediaplayer is created in AugmentedImageActivity and set in node.
@@ -193,12 +197,24 @@ public class AugmentedImageActivity extends AppCompatActivity {
           }
 
           // Create a new anchor for newly found images.
+
+          // TODO: Might be something with hashmaps
           if (!augmentedImageMap.containsKey(augmentedImage)) {
+
+            if(AugmentedImageMediaPlayer.augmentedImageNode != null){
+              Log.d("image", "trying to stop, in map");
+              AugmentedImageMediaPlayer.augmentedImageNode.nodeMediaPlayer.reset();
+              //AugmentedImageMediaPlayer.mediaPlayerInstance.stop();
+              AugmentedImageMediaPlayer.augmentedImageNode = null;
+            }
             //augmentedImageVideoPlayer = MediaPlayer.create(context, AugmentedImageFragment.Video_list[augmentedImageIndex]);
-            node = new AugmentedImageNode(this);
-            node.setImage(augmentedImage, augmentedImage.getIndex(),this);
-            augmentedImageMap.put(augmentedImage, node);
-            arFragment.getArSceneView().getScene().addChild(node);
+            AugmentedImageMediaPlayer.augmentedImageNode = new AugmentedImageNode(this);
+            AugmentedImageMediaPlayer.augmentedImageNode.setImage(augmentedImage, augmentedImage.getIndex(),this);
+            augmentedImageMap.put(augmentedImage, AugmentedImageMediaPlayer.augmentedImageNode);
+            arFragment.getArSceneView().getScene().addChild(AugmentedImageMediaPlayer.augmentedImageNode);
+            Log.d("image", "creating node!!!");
+            // this stops the node. AugmentedImageMediaPlayer.augmentedImageNode.stopVideo();
+
 
           }
           break;
