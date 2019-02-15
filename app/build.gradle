@@ -61,33 +61,28 @@ dependencies {
 
 apply plugin: 'com.google.ar.sceneform.plugin'
 
-sceneform.asset('sampledata/models/frame_lower_left.obj',
-        'default',
-        'sampledata/models/frame_lower_left.sfa',
-        'src/main/assets/models/frame_lower_left')
-
-sceneform.asset('sampledata/models/frame_lower_right.obj',
-        'default',
-        'sampledata/models/frame_lower_right.sfa',
-        'src/main/assets/models/frame_lower_right')
-
-sceneform.asset('sampledata/models/frame_upper_left.obj',
-        'default',
-        'sampledata/models/frame_upper_left.sfa',
-        'src/main/assets/models/frame_upper_left')
-
-sceneform.asset('sampledata/models/frame_upper_right.obj',
-        'default',
-        'sampledata/models/frame_upper_right.sfa',
-        'src/main/assets/models/frame_upper_right')
-
-
-sceneform.asset('sampledata/models/Car.obj',
-        'default',
-        'sampledata/models/Car.sfa',
-        'src/main/assets/models/Car')
 /* in order to add a new 3d object, move the obj file, mtl file and png file to
 app/sampledata/models (you will see similar files already in that place). next right click
 on the obj file and import sceneform assets, making sure it matches the file path of the objs
 above that have already been imported.
  */
+
+sceneform.asset('sampledata/models/Car.obj',
+        'default',
+        'sampledata/models/Car.sfa',
+        'src/main/assets/models/Car')
+
+sceneform.asset('sampledata/models/sushi.obj',
+        'default',
+        'sampledata/models/sushi.sfa',
+        'src/main/assets/models/sushi')
+
+sceneform.asset('sampledata/models/fancyballroom.obj',
+        'default',
+        'sampledata/models/fancyballroom.sfa',
+        'src/main/assets/models/fancyballroom')
+
+sceneform.asset('sampledata/models/beachflag.obj',
+        'default',
+        'sampledata/models/beachflag.sfa',
+        'src/main/assets/models/beachflag')

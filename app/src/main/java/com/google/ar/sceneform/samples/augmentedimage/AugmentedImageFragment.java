@@ -53,14 +53,38 @@ public class AugmentedImageFragment extends ArFragment {
 
 
   // Create a list of the images to be used (the order must match the order of the Music_list)
-  private static final String[] Image_list = {
-          "earth.jpg",
-          "elephant.jpg",
-          "sushi.jpg"
+  public static final String[] Image_list = {
+          //"beachcroc",
+          "beachflag",
+          ////"birds",
+          ////"couple",
+          //"elephant",
+          "fancyballroom",
+          //"firebreathingchicken",
+          //"lavaeye",
+          //"skater",
+          //"sunsetmonorail",
+          "sushi",
+          //"ufosighting",
+          //"waterfall"
   };
 
   // Create a list of the song file paths to be used (the order must match the order of Image_list)
-  public static final int[] Music_list = {R.raw.earth, R.raw.kahoot, R.raw.sushi};
+  public static final int[] Music_list = {
+          //R.raw.beachcroc,
+          R.raw.beachflag,
+          ////R.raw.imagine,
+          ////R.raw.couple,
+          //R.raw.elephant,
+          R.raw.fancyballroom,
+          //R.raw.firebreathingchicken,
+          //R.raw.lavaeye,
+          //R.raw.skater,
+          //R.raw.sunsetmonorail,
+          R.raw.sushi,
+          //R.raw.ufosighting,
+          //R.raw.imagine
+    };
 
 
   // Do a runtime check for the OpenGL level available at runtime to avoid Sceneform crashing the
@@ -134,27 +158,27 @@ public class AugmentedImageFragment extends ArFragment {
 
       // For each item in the Image_list, add the image to the database
 
-      Bitmap augmentedImageBitmap = loadAugmentedImageBitmap(assetManager, Image_list[i]);
+      Bitmap augmentedImageBitmap = loadAugmentedImageBitmap(assetManager, Image_list[i] + ".jpg");
       if (augmentedImageBitmap == null) {
         return false;
-    }
-      augmentedImageDatabase.addImage(Image_list[i], augmentedImageBitmap);
-    }
-      // If the physical size of the image is known, you can instead use:
-      //     augmentedImageDatabase.addImage("image_name", augmentedImageBitmap, widthInMeters);
-      // This will improve the initial detection speed. ARCore will still actively estimate the
-      // physical size of the image as it is viewed from multiple viewpoints.
-
-      config.setAugmentedImageDatabase(augmentedImageDatabase);
-      return true;
-    }
-
-    private Bitmap loadAugmentedImageBitmap (AssetManager assetManager, String IMAGE_NAME){
-      try (InputStream is = assetManager.open(IMAGE_NAME)) {
-        return BitmapFactory.decodeStream(is);
-      } catch (IOException e) {
-        Log.e(TAG, "IO exception loading augmented image bitmap.", e);
       }
-      return null;
+      augmentedImageDatabase.addImage(Image_list[i] + ".jpg", augmentedImageBitmap);
     }
+    // If the physical size of the image is known, you can instead use:
+    //     augmentedImageDatabase.addImage("image_name", augmentedImageBitmap, widthInMeters);
+    // This will improve the initial detection speed. ARCore will still actively estimate the
+    // physical size of the image as it is viewed from multiple viewpoints.
+
+    config.setAugmentedImageDatabase(augmentedImageDatabase);
+    return true;
   }
+
+  private Bitmap loadAugmentedImageBitmap (AssetManager assetManager, String IMAGE_NAME){
+    try (InputStream is = assetManager.open(IMAGE_NAME)) {
+      return BitmapFactory.decodeStream(is);
+    } catch (IOException e) {
+      Log.e(TAG, "IO exception loading augmented image bitmap.", e);
+    }
+    return null;
+  }
+}

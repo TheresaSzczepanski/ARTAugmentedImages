@@ -131,11 +131,12 @@ public class AugmentedImageActivity extends AppCompatActivity {
           }
 
           // Create a new anchor for newly found images.
+
           if (!augmentedImageMap.containsKey(augmentedImage)) {
-            AugmentedImageNode node = new AugmentedImageNode(this);
-            node.setImage(augmentedImage);
-            augmentedImageMap.put(augmentedImage, node);
-            arFragment.getArSceneView().getScene().addChild(node);
+              AugmentedImageNode node = new AugmentedImageNode(this, AugmentedImageFragment.Image_list, currentSongIndex);
+              node.setImage(augmentedImage);
+              augmentedImageMap.put(augmentedImage, node);
+              arFragment.getArSceneView().getScene().addChild(node);
           }
           break;
 

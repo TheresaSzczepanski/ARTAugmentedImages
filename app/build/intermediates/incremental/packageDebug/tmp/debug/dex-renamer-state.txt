@@ -1,4 +1,4 @@
-#Mon Jan 14 14:29:51 EST 2019
-base.0=/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/transforms/dexMerger/debug/0
+#Thu Feb 14 14:55:30 EST 2019
+base.0=/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/transforms/dexMerger/debug/17
 path.0=classes.dex
 renamed.0=classes.dex

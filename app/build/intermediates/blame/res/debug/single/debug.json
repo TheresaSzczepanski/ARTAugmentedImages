@@ -20,6 +20,10 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_ufosighting.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/ufosighting.mp3"
+    },
+    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
@@ -168,6 +172,10 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/res/layout/design_layout_tab_icon.xml"
     },
     {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_skater.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/skater.mp3"
+    },
+    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/color/abc_primary_text_disable_only_material_light.xml"
     },
@@ -308,6 +316,10 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_couple.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/couple.mp3"
+    },
+    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -398,6 +410,10 @@
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar.xml.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_elephant.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/elephant.mp3"
     },
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout_design_navigation_menu_item.xml.flat",
@@ -624,6 +640,10 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_fancyballroom.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/fancyballroom.mp3"
+    },
+    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -672,12 +692,12 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/146a7c97e48e4b80acaadda52fd9e32b/res/layout-v21/notification_action_tombstone.xml"
-    },
-    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_sceneform_view_renderable.sfb.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/rendering-1.5.1.aar/67d1c5e4feecf2c942f29c88183d1ecd/res/raw/sceneform_view_renderable.sfb"
+    },
+    {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/146a7c97e48e4b80acaadda52fd9e32b/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_layout.xml.flat",
@@ -686,6 +706,10 @@
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable_abc_text_cursor_material.xml.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_beachcroc.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/beachcroc.mp3"
     },
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
@@ -734,6 +758,10 @@
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_firebreathingchicken.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/firebreathingchicken.mp3"
     },
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -804,6 +832,14 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_lavaeye.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/lavaeye.mp3"
+    },
+    {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_beachflag.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/beachflag.mp3"
+    },
+    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
@@ -822,6 +858,10 @@
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable_abc_ic_ab_back_material.xml.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_imagine.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/imagine.mp3"
     },
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
@@ -1160,6 +1200,10 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/res/layout/design_navigation_item_separator.xml"
     },
     {
+        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_sunsetmonorail.mp3.flat",
+        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/sunsetmonorail.mp3"
+    },
+    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
     },
@@ -1448,10 +1492,6 @@
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/res/layout/design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_earth.mp3.flat",
-        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/earth.mp3"
-    },
-    {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d441e9d4ad7ae2d514072ecd605fc558/res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
@@ -1598,10 +1638,6 @@
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_design_ic_visibility.png.flat",
         "source": "/Users/RTLocalUser/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/4cc8592711143a3346535a6803179c01/res/drawable-mdpi-v4/design_ic_visibility.png"
-    },
-    {
-        "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/raw_kahoot.mp3.flat",
-        "source": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/res/raw/kahoot.mp3"
     },
     {
         "merged": "/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",

@@ -19,15 +19,15 @@ public final class R {
         public static final int __arcore_education = 0x7f0a0000;
     }
     public static final class raw {
-        public static final int sceneform_blur_material = 0x7f0b0002;
-        public static final int sceneform_camera_material = 0x7f0b0003;
-        public static final int sceneform_opaque_colored_material = 0x7f0b0006;
-        public static final int sceneform_opaque_textured_material = 0x7f0b0007;
-        public static final int sceneform_plane_material = 0x7f0b0008;
-        public static final int sceneform_plane_shadow_material = 0x7f0b0009;
-        public static final int sceneform_transparent_colored_material = 0x7f0b000a;
-        public static final int sceneform_transparent_textured_material = 0x7f0b000b;
-        public static final int sceneform_view_renderable = 0x7f0b000c;
+        public static final int sceneform_blur_material = 0x7f0b0008;
+        public static final int sceneform_camera_material = 0x7f0b0009;
+        public static final int sceneform_opaque_colored_material = 0x7f0b000c;
+        public static final int sceneform_opaque_textured_material = 0x7f0b000d;
+        public static final int sceneform_plane_material = 0x7f0b000e;
+        public static final int sceneform_plane_shadow_material = 0x7f0b000f;
+        public static final int sceneform_transparent_colored_material = 0x7f0b0010;
+        public static final int sceneform_transparent_textured_material = 0x7f0b0011;
+        public static final int sceneform_view_renderable = 0x7f0b0012;
     }
     public static final class string {
         public static final int __arcore_cancel = 0x7f0c0000;
