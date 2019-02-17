@@ -19,6 +19,7 @@ package com.google.ar.sceneform.samples.augmentedimage;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +29,9 @@ import com.google.ar.core.Frame;
 import com.google.ar.core.TrackingState;
 import com.google.ar.sceneform.FrameTime;
 import com.google.ar.sceneform.math.Vector3;
+import com.google.ar.sceneform.rendering.ExternalTexture;
+import com.google.ar.sceneform.rendering.ModelRenderable;
+import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.samples.common.helpers.SnackbarHelper;
 import com.google.ar.sceneform.ux.ArFragment;
 
@@ -35,18 +39,30 @@ import java.io.InputStream;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
 import android.media.MediaPlayer;
 
 /**
  * This application demonstrates using augmented images to place anchor nodes. app to include image
  * tracking functionality.
  */
-public class AugmentedImageActivity extends AppCompatActivity {
+/*
 
-  private MediaPlayer mediaPlayer;
-  public static MediaPlayer augmentedImageVideoPlayer = null;
+Programmed by Rising Tide Augmented Reality Team (ART) - Joseph Turner, Emma Riley, Nora Rooney, and Robert Brodin - 2019
+
+AugmentedImage - Video version, detects images and places specific videos (see AugmentedImageFragment). When a different image is detected, the video playing is stopped and a new video is started (specific to the new image).
+
+ */
+
+public class AugmentedImageActivity extends AppCompatActivity {
+  
   public static Integer augmentedImageVideoPlayerIndex = null;
-  private Integer currentSongIndex = null;
+  private AugmentedImage mediaAugmentedImage = null;
+  public static CompletableFuture<ModelRenderable> videoRenderable;
+  @Nullable public static ModelRenderable videoPlacedRenderable;
+
 
   private ArFragment arFragment;
   private ImageView fitToScanView;
@@ -108,112 +124,33 @@ public class AugmentedImageActivity extends AppCompatActivity {
           // Have to switch to UI Thread to update View.
           fitToScanView.setVisibility(View.GONE);
 
-          //Need to check if currentNode is null or not
 
-          // TODO: Issue is with I think how the node is defined and the variable is set equal to it, but it is not actually changing it.
-          if((AugmentedImageMediaPlayer.augmentedImageNode != null) &&(!(AugmentedImageMediaPlayer.mediaPlayerInstance == null)) && augmentedImage.getIndex() != augmentedImageVideoPlayerIndex){
-
-            // TODO: breaks here, augmentedImageVideoPlayer is not working correctly.
-
-            // TODO: Actually, the solution here might be to send a signal to augmentedImageNode to stop the video.
-            // TODO: using static methods is likely not a viable solution.
-
-            // Stops the currentVideo from playing if a new image is detected and the node's video player is null.
-            Log.d("if", "statement works!");
-            Log.d("videoname", AugmentedImageMediaPlayer.augmentedImageNode.getVideoTitle());
-
-            // It does make shaq bigger when a new image is detected!
-
-            //TODO: ISSUE HERE!!!! - 071219
-
-            AugmentedImageMediaPlayer.augmentedImageNode.videoNode.setWorldScale(new Vector3(10.0f, 10.0f, 10.0f));
-            // This works!
-
-            if(AugmentedImageMediaPlayer.mediaPlayerInstance.isPlaying()) {
-              // this is running....
-              //AugmentedImageMediaPlayer.mediaPlayerInstance.stop();
-              Log.d("image", "stopping!!!");
-              //node.videoNode.setParent(null);
-              //node.videoNode.setRenderable(null);
-              AugmentedImageMediaPlayer.augmentedImageNode.stopVideo();
-              AugmentedImageMediaPlayer.resetVideo();
-              AugmentedImageMediaPlayer.augmentedImageNode = null;
-
-              //AugmentedImageMediaPlayer.augmentedImageNode.stopVideo();
-
-            }
-            // What if a mediaplayer is created in AugmentedImageActivity and set in node.
-            //node.removeChild(node.videoNode);
-            //node = null;
-
-            //node.getScene().onRemoveChild(node.getParent());
-            //node.setRenderable(null);
+          // Checks if the node that is used for the video is not null, if the node's mediaplayer is not null, and if the current image detected is not the same image as the last image detected.
+          // This section is used to stop the video from playing.
+          if((AugmentedImageStaticNode.node != null) &&(!(AugmentedImageStaticNode.node.nodeMediaPlayer == null)) && augmentedImage.getIndex() != augmentedImageVideoPlayerIndex) {
 
 
-
-            //node.nodeMediaPlayer.stop();
-            //node.nodeMediaPlayer.release();
-            //node.nodeMediaPlayer = null;
-
-            //node.getScene().onRemoveChild(node.getParent());
-            //node.setRenderable(null);
-
-
-            // Removed the node but still playing song.
-            //node.removeChild(node.videoNode);
-            //node = null;
-            //augmentedImageVideoPlayer.stop();
-            //augmentedImageVideoPlayer.release();
-          }
-
-
-          if (currentSongIndex == null) {
-            // If there is no song playing, set currentSongIndex to the song that aligns with
-            // the detected image
-            currentSongIndex = augmentedImage.getIndex();
-
-            mediaPlayer = MediaPlayer.create(this, AugmentedImageFragment.Music_list[currentSongIndex]);
-            mediaPlayer.start();
-            // Create a new mediaPlayer object with the correct song
-            // Start the song
-          }
-          // Stopping the video player if another new image is detected.
-          // Checks if the videoplayer is not null and if the currentImage index is equal to the same index as augmentedImageVideoPlayerIndex (
-          else if((currentSongIndex != augmentedImage.getIndex())){
-
-            // If the song that is playing does not match up with the song the image it detects
-            // is assigned to:
-            // Assign the correct song to currentSongIndex
-            // Stop playing the song, reset the mediaPlayer object
-            currentSongIndex = augmentedImage.getIndex();
-            mediaPlayer.stop();
-            mediaPlayer.release();
-
-            mediaPlayer = MediaPlayer.create(this, AugmentedImageFragment.Music_list[currentSongIndex]);
-            mediaPlayer.start();
-            // Recreate the mediaPlayer object with the correct song
-            // Start the song
+            // Video is stopped.
+            AugmentedImageStaticNode.node.stopVideo();
+            // Node that the video is placed on is removed from the scene.
+            AugmentedImageStaticNode.node.removeChild(AugmentedImageStaticNode.node.videoNode);
+            // the image that correlates to the video that is being stopped is removed from the hashmap of detected images (makes it so if that same image is detected later, a video will be played)
+            augmentedImageMap.remove(mediaAugmentedImage);
 
           }
 
-          // Create a new anchor for newly found images.
-
-          // TODO: Might be something with hashmaps
           if (!augmentedImageMap.containsKey(augmentedImage)) {
 
-            if(AugmentedImageMediaPlayer.augmentedImageNode != null){
-              Log.d("image", "trying to stop, in map");
-              AugmentedImageMediaPlayer.augmentedImageNode.nodeMediaPlayer.reset();
-              //AugmentedImageMediaPlayer.mediaPlayerInstance.stop();
-              AugmentedImageMediaPlayer.augmentedImageNode = null;
-            }
-            //augmentedImageVideoPlayer = MediaPlayer.create(context, AugmentedImageFragment.Video_list[augmentedImageIndex]);
-            AugmentedImageMediaPlayer.augmentedImageNode = new AugmentedImageNode(this);
-            AugmentedImageMediaPlayer.augmentedImageNode.setImage(augmentedImage, augmentedImage.getIndex(),this);
-            augmentedImageMap.put(augmentedImage, AugmentedImageMediaPlayer.augmentedImageNode);
-            arFragment.getArSceneView().getScene().addChild(AugmentedImageMediaPlayer.augmentedImageNode);
-            Log.d("image", "creating node!!!");
-            // this stops the node. AugmentedImageMediaPlayer.augmentedImageNode.stopVideo();
+            // New AugmentedImageNode class is created in THIS context.
+            AugmentedImageStaticNode.node = new AugmentedImageNode(this);
+            // startVideo takes arguments: context, imageIndex, and texture. This method starts the video (using .create()), and places it on the surface.
+            AugmentedImageStaticNode.node.startVideo(this, augmentedImage.getIndex(), AugmentedImageStaticNode.node.texture);
+            // Set image places the video on a renderable.
+            AugmentedImageStaticNode.node.setImage(this, augmentedImage, augmentedImage.getIndex());
+            // augmentedImage is put in a hashmap, will be used to detect if the image has already been detected (deprecated in this version)
+            augmentedImageMap.put(augmentedImage, AugmentedImageStaticNode.node);
+            arFragment.getArSceneView().getScene().addChild(AugmentedImageStaticNode.node);
+            mediaAugmentedImage = augmentedImage; // fixes the issue of videos not playing with their specific image if that image has been detected before.
 
 
           }
