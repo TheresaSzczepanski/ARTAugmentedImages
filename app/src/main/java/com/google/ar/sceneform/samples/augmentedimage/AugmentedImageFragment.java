@@ -42,29 +42,20 @@ import java.io.InputStream;
 public class AugmentedImageFragment extends ArFragment {
   private static final String TAG = "AugmentedImageFragment";
 
-  // This is the name of the image in the sample database.  A copy of the image is in the assets
-  // directory.  Opening this image on your computer is a good quick way to test the augmented image
-  // matching.
-
-  // This is a pre-created database containing the sample image.
-
-  // Augmented image configuration and rendering.
-  // Load a single image (true) or a pre-generated image database (false).
-
-
-  // Create a list of the images to be used (the order must match the order of the Music_list)
+  // Create a list of the images to be used (the order must match the order of the Music_list [indexes are the same!])
   private static final String[] Image_list = {
           "earth.jpg",
           "elephant.jpg",
           "sushi.jpg",
-          "skatergirl.JPG"
+          "skatergirl.JPG",
+          "firechicken.JPG"
   };
 
   // Create a list of the song file paths to be used (the order must match the order of Image_list)
-  public static final int[] Music_list = {R.raw.earth, R.raw.kahoot, R.raw.sushi, R.raw.sushi};
+  public static final int[] Music_list = {R.raw.earth, R.raw.kahoot, R.raw.sushi, R.raw.sushi, R.raw.sushi};
 
   // Creates a list of video files to link with image index
-  public static final int[] Video_list = {R.raw.shaq, R.raw.skater, R.raw.skater, R.raw.skater};
+  public static final int[] Video_list = {R.raw.liquishaq, R.raw.skater, R.raw.liquishaq, R.raw.skater, R.raw.chicken};
 
   // Do a runtime check for the OpenGL level available at runtime to avoid Sceneform crashing the
   // application.
