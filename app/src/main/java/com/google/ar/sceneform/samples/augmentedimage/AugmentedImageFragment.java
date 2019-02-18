@@ -57,6 +57,8 @@ public class AugmentedImageFragment extends ArFragment {
   // Creates a list of video files to link with image index
   public static final int[] Video_list = {R.raw.liquishaq, R.raw.skater, R.raw.liquishaq, R.raw.skater, R.raw.chicken};
 
+  public static final boolean[] imagePlaysVideoBooleanList = {false, false, false, false, true};
+
   // Do a runtime check for the OpenGL level available at runtime to avoid Sceneform crashing the
   // application.
   private static final double MIN_OPENGL_VERSION = 3.0;
