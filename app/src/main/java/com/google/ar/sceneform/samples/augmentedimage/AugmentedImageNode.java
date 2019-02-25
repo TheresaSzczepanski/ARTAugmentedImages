@@ -69,17 +69,17 @@ public class AugmentedImageNode extends AnchorNode {
   private static CompletableFuture<ModelRenderable> waterfall;
 
   public static CompletableFuture[] renderableList = {
-          //beachcroc,
+          beachcroc,
           beachflag,
-          //elephant,
+          elephant,
           fancyballroom,
-          //firebreathingchicken,
-          //lavaeye,
-          //skater,
-          //sunsetmonorail,
+          firebreathingchicken,
+          lavaeye,
+          skater,
+          sunsetmonorail,
           sushi,
-          //ufosighting,
-          //waterfall
+          ufosighting,
+          waterfall
   };
 
   public AugmentedImageNode(Context context, String[] imageList, Integer currentIndex) {
