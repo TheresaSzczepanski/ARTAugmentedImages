@@ -84,5 +84,45 @@ sceneform.asset('sampledata/models/fancyballroom.obj',
 
 sceneform.asset('sampledata/models/beachflag.obj',
         'default',
-        'sampledata/models/beachflag.sfa',
+        'sampledata/models/beachcflag.sfa',
         'src/main/assets/models/beachflag')
+
+sceneform.asset('sampledata/models/beachcroc.obj',
+        'default',
+        'sampledata/models/beachcroc.sfa',
+        'src/main/assets/models/beachcroc')
+
+sceneform.asset('sampledata/models/elephant.obj',
+        'default',
+        'sampledata/models/elephant.sfa',
+        'src/main/assets/models/elephant')
+
+sceneform.asset('sampledata/models/firebreathingchicken.obj',
+        'default',
+        'sampledata/models/firebreathingchicken.sfa',
+        'src/main/assets/models/firebreathingchicken')
+
+sceneform.asset('sampledata/models/lavaeye.obj',
+        'default',
+        'sampledata/models/lavaeye.sfa',
+        'src/main/assets/models/lavaeye')
+
+sceneform.asset('sampledata/models/skater.obj',
+        'default',
+        'sampledata/models/skater.sfa',
+        'src/main/assets/models/skater')
+
+sceneform.asset('sampledata/models/sunsetmonorail.obj',
+        'default',
+        'sampledata/models/sunsetmonorail.sfa',
+        'src/main/assets/models/sunsetmonorail')
+
+sceneform.asset('sampledata/models/ufosighting.obj',
+        'default',
+        'sampledata/models/ufosighting.sfa',
+        'src/main/assets/models/ufosighting')
+
+sceneform.asset('sampledata/models/waterfall.obj',
+        'default',
+        'sampledata/models/waterfall.sfa',
+        'src/main/assets/models/waterfall')
