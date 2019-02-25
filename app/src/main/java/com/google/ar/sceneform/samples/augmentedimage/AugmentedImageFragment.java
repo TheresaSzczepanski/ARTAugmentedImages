@@ -53,37 +53,37 @@ public class AugmentedImageFragment extends ArFragment {
 
 
   // Create a list of the images to be used (the order must match the order of the Music_list)
-  public static final String[] Image_list = {
-          //"beachcroc",
+    public static final String[] Image_list = {
+          "beachcroc",
           "beachflag",
-          ////"birds",
-          ////"couple",
-          //"elephant",
+          //"birds",
+          //"couple",
+          "elephant",
           "fancyballroom",
-          //"firebreathingchicken",
-          //"lavaeye",
-          //"skater",
-          //"sunsetmonorail",
+          "firebreathingchicken",
+          "lavaeye",
+          "skater",
+          "sunsetmonorail",
           "sushi",
-          //"ufosighting",
-          //"waterfall"
+          "ufosighting",
+          "waterfall"
   };
 
   // Create a list of the song file paths to be used (the order must match the order of Image_list)
   public static final int[] Music_list = {
-          //R.raw.beachcroc,
+          R.raw.beachcroc,
           R.raw.beachflag,
-          ////R.raw.imagine,
-          ////R.raw.couple,
-          //R.raw.elephant,
+          //R.raw.imagine,
+          //R.raw.couple,
+          R.raw.elephant,
           R.raw.fancyballroom,
-          //R.raw.firebreathingchicken,
-          //R.raw.lavaeye,
-          //R.raw.skater,
-          //R.raw.sunsetmonorail,
+          R.raw.firebreathingchicken,
+          R.raw.lavaeye,
+          R.raw.skater,
+          R.raw.sunsetmonorail,
           R.raw.sushi,
-          //R.raw.ufosighting,
-          //R.raw.imagine
+          R.raw.ufosighting,
+          R.raw.imagine
     };
 
 
