@@ -42,7 +42,7 @@ import android.media.MediaPlayer;
 public class AugmentedImageActivity extends AppCompatActivity {
 
   private MediaPlayer mediaPlayer;
-  private Integer currentSongIndex = null;
+  public static Integer currentIndex = null;
 
   private ArFragment arFragment;
   private ImageView fitToScanView;
@@ -102,28 +102,28 @@ public class AugmentedImageActivity extends AppCompatActivity {
           // Have to switch to UI Thread to update View.
           fitToScanView.setVisibility(View.GONE);
 
-          if (currentSongIndex == null) {
-            // If there is no song playing, set currentSongIndex to the song that aligns with
+          if (currentIndex == null) {
+            // If there is no song playing, set currentIndex to the song that aligns with
             // the detected image
-            currentSongIndex = augmentedImage.getIndex();
+            currentIndex = augmentedImage.getIndex();
 
-            mediaPlayer = MediaPlayer.create(this, AugmentedImageFragment.Music_list[currentSongIndex]);
+            mediaPlayer = MediaPlayer.create(this, AugmentedImageFragment.Music_list[currentIndex]);
             mediaPlayer.start();
             // Create a new mediaPlayer object with the correct song
             // Start the song
           }
 
-          else if((currentSongIndex != augmentedImage.getIndex())){
+          else if((currentIndex != augmentedImage.getIndex())){
 
             // If the song that is playing does not match up with the song the image it detects
             // is assigned to:
-            // Assign the correct song to currentSongIndex
+            // Assign the correct song to currentIndex
             // Stop playing the song, reset the mediaPlayer object
-            currentSongIndex = augmentedImage.getIndex();
+            currentIndex = augmentedImage.getIndex();
             mediaPlayer.stop();
             mediaPlayer.release();
 
-            mediaPlayer = MediaPlayer.create(this, AugmentedImageFragment.Music_list[currentSongIndex]);
+            mediaPlayer = MediaPlayer.create(this, AugmentedImageFragment.Music_list[currentIndex]);
             mediaPlayer.start();
             // Recreate the mediaPlayer object with the correct song
             // Start the song
@@ -133,7 +133,7 @@ public class AugmentedImageActivity extends AppCompatActivity {
           // Create a new anchor for newly found images.
 
           if (!augmentedImageMap.containsKey(augmentedImage)) {
-              AugmentedImageNode node = new AugmentedImageNode(this, AugmentedImageFragment.Image_list, currentSongIndex);
+              AugmentedImageNode node = new AugmentedImageNode(this, AugmentedImageFragment.Image_list);
               node.setImage(augmentedImage);
               augmentedImageMap.put(augmentedImage, node);
               arFragment.getArSceneView().getScene().addChild(node);
