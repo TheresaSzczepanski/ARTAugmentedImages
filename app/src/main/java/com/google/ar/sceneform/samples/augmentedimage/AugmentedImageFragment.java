@@ -58,7 +58,7 @@ public class AugmentedImageFragment extends ArFragment {
           "beachflag",
           //"birds",
           //"couple",
-          "elephant",
+          "bigger_elephant",
           "fancyballroom",
           "firebreathingchicken",
           "lavaeye",
