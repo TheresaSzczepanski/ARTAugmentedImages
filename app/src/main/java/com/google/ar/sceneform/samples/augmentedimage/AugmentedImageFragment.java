@@ -53,7 +53,7 @@ public class AugmentedImageFragment extends ArFragment {
 
 
   // Create a list of the images to be used (the order must match the order of the Music_list)
-    public static final String[] Image_list = {
+  public static final String[] Image_list = {
           "beachcroc",
           "beachflag",
           //"birds",
@@ -79,12 +79,16 @@ public class AugmentedImageFragment extends ArFragment {
           R.raw.fancyballroom,
           R.raw.firebreathingchicken,
           R.raw.lavaeye,
-          R.raw.skater,
+          R.raw.imagine, // skater_song
           R.raw.sunsetmonorail,
           R.raw.sushi,
           R.raw.ufosighting,
           R.raw.imagine
-    };
+  };
+
+//11
+  public static final int[] Video_list = {R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater};
+  public static final boolean[] imagePlaysVideoBooleanList = {false, false, false, false, true, true,false,false,true,true,true};
 
 
   // Do a runtime check for the OpenGL level available at runtime to avoid Sceneform crashing the
