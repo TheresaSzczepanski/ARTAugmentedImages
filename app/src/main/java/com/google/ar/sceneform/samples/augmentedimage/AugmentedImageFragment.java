@@ -89,6 +89,8 @@ public class AugmentedImageFragment extends ArFragment {
 //11
   public static final int[] Video_list = {R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater, R.raw.skater};
   public static final boolean[] imagePlaysVideoBooleanList = {false, false, false, false, true, true,false,false,true,true,true};
+  public boolean usePreloadedDatabase = true;
+  private static final String SAMPLE_IMAGE_DATABASE = "newdatabase.imgdb";
 
 
   // Do a runtime check for the OpenGL level available at runtime to avoid Sceneform crashing the
@@ -155,23 +157,37 @@ public class AugmentedImageFragment extends ArFragment {
     // Option 2) has
     // * shorter setup time
     // * doesn't require images to be packaged in apk.
+    if(!usePreloadedDatabase) {
+      augmentedImageDatabase = new AugmentedImageDatabase(session);
 
-    augmentedImageDatabase = new AugmentedImageDatabase(session);
+      for (int i = 0; i < Image_list.length; i++) {
 
-    for (int i = 0; i < Image_list.length; i++) {
+        // For each item in the Image_list, add the image to the database
 
-      // For each item in the Image_list, add the image to the database
+        Bitmap augmentedImageBitmap = loadAugmentedImageBitmap(assetManager, Image_list[i] + ".jpg");
+        if (augmentedImageBitmap == null) {
+          return false;
+        }
+        augmentedImageDatabase.addImage(Image_list[i] + ".jpg", augmentedImageBitmap);
+      }
+      // If the physical size of the image is known, you can instead use:
+      //     augmentedImageDatabase.addImage("image_name", augmentedImageBitmap, widthInMeters);
+      // This will improve the initial detection speed. ARCore will still actively estimate the
+      // physical size of the image as it is viewed from multiple viewpoints.
 
-      Bitmap augmentedImageBitmap = loadAugmentedImageBitmap(assetManager, Image_list[i] + ".jpg");
-      if (augmentedImageBitmap == null) {
+      config.setAugmentedImageDatabase(augmentedImageDatabase);
+      return true;
+    }
+    else{
+      // This is an alternative way to initialize an AugmentedImageDatabase instance,
+      // load a pre-existing augmented image database.
+      try (InputStream is = getContext().getAssets().open(SAMPLE_IMAGE_DATABASE)) {
+        augmentedImageDatabase = AugmentedImageDatabase.deserialize(session, is);
+      } catch (IOException e) {
+        Log.e(TAG, "IO exception loading augmented image database.", e);
         return false;
       }
-      augmentedImageDatabase.addImage(Image_list[i] + ".jpg", augmentedImageBitmap);
     }
-    // If the physical size of the image is known, you can instead use:
-    //     augmentedImageDatabase.addImage("image_name", augmentedImageBitmap, widthInMeters);
-    // This will improve the initial detection speed. ARCore will still actively estimate the
-    // physical size of the image as it is viewed from multiple viewpoints.
 
     config.setAugmentedImageDatabase(augmentedImageDatabase);
     return true;
