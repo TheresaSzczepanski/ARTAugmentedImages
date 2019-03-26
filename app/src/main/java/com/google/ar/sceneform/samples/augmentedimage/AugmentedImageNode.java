@@ -187,9 +187,9 @@ public class AugmentedImageNode extends AnchorNode {
         fullnode.setParent(this);
         fullnode.setWorldPosition(new Vector3 ((this.getWorldPosition().x + (nodePosition[currentIndex].x)), (this.getWorldPosition().y + (nodePosition[currentIndex].y)), (this.getWorldPosition().z + (nodePosition[currentIndex].z))));
         fullnode.setLocalScale(new Vector3(0.1f, 0.1f, 0.1f));
-        Quaternion q1 = fullnode.getLocalRotation();
-        Quaternion q2 = Quaternion.axisAngle(new Vector3(nodeRotation[currentIndex].x, nodeRotation[currentIndex].y, nodeRotation[currentIndex].z), nodeRotation[currentIndex].q);
-        fullnode.setLocalRotation(Quaternion.multiply(q1, q2));
+        Quaternion currentQuaternion = fullnode.getLocalRotation();
+        Quaternion newQuaternion = Quaternion.axisAngle(new Vector3(nodeRotation[currentIndex].x, nodeRotation[currentIndex].y, nodeRotation[currentIndex].z), nodeRotation[currentIndex].q);
+        fullnode.setLocalRotation(Quaternion.multiply(currentQuaternion, newQuaternion));
         fullnode.setRenderable(currentRenderable.getNow(null));
 
     }
