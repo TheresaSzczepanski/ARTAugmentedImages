@@ -32,6 +32,7 @@ import com.google.ar.sceneform.rendering.Color;
 import com.google.ar.sceneform.rendering.ExternalTexture;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
@@ -103,6 +104,22 @@ public class AugmentedImageNode extends AnchorNode {
             new Vector3 (0.0f, 0.0f, 0.0f)  //waterfall
     };
 
+    public static Vector4[] nodeRotation = {
+
+            new Vector4 (0, 0, 0, 0f), //beachcroc
+            new Vector4 (0, 0, 0, 0f), //beachflag
+            new Vector4 (0, 0, 0, 0f), //bigger_elephant
+            new Vector4 (0, 0, 0, 0f), //fancyballroom
+            new Vector4 (0, 0, 0, 0f), //firebreathingchicken
+            new Vector4 (0, 0, 0, 0f), //lavaeye
+            new Vector4 (0, 0, 0, 0f), //skater
+            new Vector4 (0, 0, 0, 0f), //sunsetmonorail
+            new Vector4 (0, 0, 0, 0f), //sushi
+            new Vector4 (0, 0, 0, 0f), //ufosighting
+            new Vector4 (0, 0, 0, 0f)  //waterfall
+    };
+
+
     public CompletableFuture<ModelRenderable> currentRenderable;
 
     // The augmented image represented by this node.
@@ -119,15 +136,15 @@ public class AugmentedImageNode extends AnchorNode {
     // Controls the height of the video in world space.
     private static final float VIDEO_HEIGHT_METERS = 0.2f;
 
-    public AugmentedImageNode(Context context, String[] imageList) {
+    public AugmentedImageNode(Context context, String[] imageList, Integer currentIndex) {
 
         if (sushi == null) {
-            currentRenderable = renderableList.get(AugmentedImageActivity.currentIndex);
+            currentRenderable = renderableList.get(currentIndex);
             currentRenderable =
                     ModelRenderable.builder()
-                            .setSource(context, Uri.parse("models/" + imageList[AugmentedImageActivity.currentIndex] + ".sfb"))
+                            .setSource(context, Uri.parse("models/" + imageList[currentIndex] + ".sfb"))
                             .build();
-            Log.d("modelrenderable", ("conditional is running! filepath: " + Uri.parse("models/" + imageList[AugmentedImageActivity.currentIndex] + ".sfb")));
+            Log.d("modelrenderable", ("conditional is running! filepath: " + Uri.parse("models/" + imageList[currentIndex] + ".sfb")));
 
 
         }
@@ -148,12 +165,12 @@ public class AugmentedImageNode extends AnchorNode {
      */
 
     @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
-    public void setImage(AugmentedImage image) {
+    public void setImage(AugmentedImage image, Integer currentIndex) {
         this.augmentedImage = image;
 
         if (!currentRenderable.isDone()) {
             CompletableFuture.allOf(currentRenderable)
-                    .thenAccept((Void aVoid) -> setImage(image))
+                    .thenAccept((Void aVoid) -> setImage(image, currentIndex))
                     .exceptionally(
                             throwable -> {
                                 Log.e(TAG, "Exception loading", throwable);
@@ -168,8 +185,11 @@ public class AugmentedImageNode extends AnchorNode {
 
         fullnode = new Node();
         fullnode.setParent(this);
-        fullnode.setWorldPosition(new Vector3 ((this.getWorldPosition().x + (nodePosition[AugmentedImageActivity.currentIndex].x)), (this.getWorldPosition().y + (nodePosition[AugmentedImageActivity.currentIndex].y)), (this.getWorldPosition().z + (nodePosition[AugmentedImageActivity.currentIndex].z))));
+        fullnode.setWorldPosition(new Vector3 ((this.getWorldPosition().x + (nodePosition[currentIndex].x)), (this.getWorldPosition().y + (nodePosition[currentIndex].y)), (this.getWorldPosition().z + (nodePosition[currentIndex].z))));
         fullnode.setLocalScale(new Vector3(0.1f, 0.1f, 0.1f));
+        Quaternion q1 = fullnode.getLocalRotation();
+        Quaternion q2 = Quaternion.axisAngle(new Vector3(nodeRotation[currentIndex].x, nodeRotation[currentIndex].y, nodeRotation[currentIndex].z), nodeRotation[currentIndex].q);
+        fullnode.setLocalRotation(Quaternion.multiply(q1, q2));
         fullnode.setRenderable(currentRenderable.getNow(null));
 
     }
