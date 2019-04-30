@@ -1,0 +1,16 @@
+beachcroc.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/beachcroc.jpg
+beachcroc_text.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/beachcroc_text.jpg
+beachflag.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/beachflag.jpg
+bigger_elephant.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/bigger_elephant.jpg
+birds.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/birds.jpg
+couple.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/couple.jpg
+fancyballroom.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/fancyballroom.jpg
+fancyballroom_text.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/fancyballroom_text.jpg
+firebreathingchicken.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/firebreathingchicken.jpg
+lavaeye.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/lavaeye.jpg
+skater.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/skater.jpg
+skater_text.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/skater_text.jpg
+sunsetmonorail.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/sunsetmonorail.jpg
+sushi.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/sushi.jpg
+ufosighting.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/ufosighting.jpg
+waterfall.jpg|/Users/RTLocalUser/Desktop/ARTAugmentedImages-master/app/src/main/assets/waterfall.jpg

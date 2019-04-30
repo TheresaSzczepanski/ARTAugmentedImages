@@ -1,0 +1,42 @@
+{
+  materials: [
+    {
+      name: 'Material.005',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.18626699999999999,
+            0.51061800000000002,
+            0.078167,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.14280000000000001,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/models/waterfall.obj',
+    name: 'waterfall',
+    recenter: 'root',
+    scale: 0.39841399999999999,
+  },
+  version: '0.52:1',
+}

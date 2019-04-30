@@ -1,0 +1,13 @@
+. filter=lfs diff=lfs merge=lfs -text
+LICENSE filter=lfs diff=lfs merge=lfs -text
+gradle filter=lfs diff=lfs merge=lfs -text
+gradle.properties filter=lfs diff=lfs merge=lfs -text
+gradlew filter=lfs diff=lfs merge=lfs -text
+gradlew.bat filter=lfs diff=lfs merge=lfs -text
+settings.gradle filter=lfs diff=lfs merge=lfs -text
+ARTAugmentedImages-master.iml filter=lfs diff=lfs merge=lfs -text
+ARTFileFinder.py filter=lfs diff=lfs merge=lfs -text
+app filter=lfs diff=lfs merge=lfs -text
+augmentedimage.iml filter=lfs diff=lfs merge=lfs -text
+build.gradle filter=lfs diff=lfs merge=lfs -text
+local.properties filter=lfs diff=lfs merge=lfs -text
