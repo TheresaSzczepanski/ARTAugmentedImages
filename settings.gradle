@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eb920be611150b24f5d144f8c5a29f17948fd5bd379d13b34317599d39cfe04d
-size 189
+include ':app'
+
+// Uncomment to include the source version of the ux package in your project.
+//include ':sceneformux'
+//project(':sceneformux').projectDir=new File('../../sceneformux/ux')
